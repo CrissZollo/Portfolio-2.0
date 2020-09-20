@@ -1,40 +1,44 @@
 body{
     background-color: #5D5D5D;
 }
+table, th, td{
+    border-collapse: collapse;
+}
+
+.image-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .bigSquare{
     height: 300px;
     width: 300px;
     margin: 10px;
     background-color: #202020;
+    /* left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%); */
     /* transform: rotate(45deg); */
 }
 
 .smallSquare{
+    position: relative;
     height: 145px;
     width: 145px;
+    margin: 5px;
     background-color: #202020;
+    /* left: 50vmax;
+    top: 50vmax;
+    transform:translate(-50%, -50%); */
     /* transform: rotate(45deg); */
-}
-  
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 98vh;
-    
 }
 
 .smallBoxes{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 300px;
-    width: 300px;
-    position: relative;
-    top: 2px;
+  position: relative;
 }
 
 .allBoxes{
-    /* transform: rotate(45deg); */
+    /* transform: rotate(-45deg); */
 }
