@@ -1,0 +1,40 @@
+body{
+    background-color: #5D5D5D;
+}
+
+.bigSquare{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    background-color: #202020;
+    /* transform: rotate(45deg); */
+}
+
+.smallSquare{
+    height: 145px;
+    width: 145px;
+    background-color: #202020;
+    /* transform: rotate(45deg); */
+}
+  
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    
+}
+
+.smallBoxes{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    top: 2px;
+}
+
+.allBoxes{
+    /* transform: rotate(45deg); */
+}
