@@ -1,9 +1,26 @@
 body{
     background-color: #5D5D5D;
 }
-table, th, td{
-    border-collapse: collapse;
+img{
+    border: none;
 }
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column{
+    width: 33%;
+    text-align: center;
+}
+
+.column img{
+    vertical-align: middle;
+}
+
+
 
 .image-container{
     position: absolute;
@@ -24,11 +41,9 @@ table, th, td{
 }
 
 .smallSquare{
-    position: relative;
     height: 145px;
     width: 145px;
     margin: 5px;
-    background-color: #202020;
     /* left: 50vmax;
     top: 50vmax;
     transform:translate(-50%, -50%); */
@@ -36,7 +51,7 @@ table, th, td{
 }
 
 .smallBoxes{
-  position: relative;
+
 }
 
 .allBoxes{
