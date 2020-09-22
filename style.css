@@ -15,7 +15,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #43475a
     vertical-align: middle;
     border: none;
     border-radius: 10%;
-    filter: grayscale();
+    filter: grayscale(90%);
 }
 
 .column img:hover{
