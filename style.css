@@ -1,16 +1,5 @@
 html, body {margin: 0; height: 100%; overflow: hidden; background-color: #43475a;}
 
-img{
-    border: none;
-    border-radius: 10%;
-    filter: grayscale();
-}
-
-img:hover{
-    filter: grayscale(0%);
-}
-
-
 .row{
     width: 100%;
     display: flex;
@@ -19,22 +8,23 @@ img:hover{
 
 .column{
     width: 33.3333vw;
-    text-align: center;
-}
-
-#test{
-    transform: scale(1);
-    
+    text-align: left;
 }
 
 .column img{
     vertical-align: middle;
+    border: none;
+    border-radius: 10%;
+    filter: grayscale();
+}
+
+.column img:hover{
+    filter: grayscale(0%);
 }
 
 
-
 .image-container{
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -45,32 +35,16 @@ img:hover{
     width: 300px;
     margin: 10px;
     background-color: #202020;
-    /* left: 50%;
-    top: 50%;
-    transform:translate(-50%, -50%); */
-    /* transform: rotate(45deg); */
 }
 
 .smallSquare{
     height: 145px;
     width: 145px;
     margin: 5px;
-    /* left: 50vmax;
-    top: 50vmax;
-    transform:translate(-50%, -50%); */
-    /* transform: rotate(45deg); */
 }
 
-.smallBoxes{
-
-}
-
-.allBoxes{
-    /* transform: rotate(-45deg); */
-}
-
-@media screen and(max-width: 1800px){
-    #test{
-        transform: scale(0.75);
+/* @media screen and(max-width: 1000px){
+    img{
+        width: 150px;
     }
-}
+} */
