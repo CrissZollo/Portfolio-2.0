@@ -1,4 +1,10 @@
-html, body {margin: 0; height: 100%; overflow: hidden; background-color: #43475a;}
+html, body{margin: 0; height: 100%; overflow: hidden; background-color: #43475a;}
+
+header h1{
+    text-align: center;
+    margin: 0px;
+    font-size: 50px;
+}
 
 .row{
     width: 100%;
@@ -41,6 +47,12 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #43475a
     height: 145px;
     width: 145px;
     margin: 5px;
+}
+
+.centered-text{
+    position: absolute;
+    top: 50%;
+    right: 15%;
 }
 
 /* @media screen and(max-width: 1000px){
