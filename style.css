@@ -9,44 +9,58 @@ header h1{
 .row{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    
 }
 
-.column{
+.column.middle{
     width: 33.3333vw;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.column img{
-    vertical-align: middle;
+.column.top, .column.bottom{
+    position: relative;
+    width: 50vw;
+}
+
+.column.middle{
+    position: relative;
+    width: calc(100vw / 3);
+}
+
+.row img{
     border: none;
+    text-align: center;
     border-radius: 10%;
     filter: grayscale(90%);
 }
 
-.column img:hover{
+.row img:hover{
     filter: grayscale(0%);
 }
 
 
-.image-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.bigSquare, .smallSquareGroup{
+    transform: rotate(45deg);
 }
 
 .bigSquare{
+    position: relative;
     height: 300px;
     width: 300px;
     margin: 10px;
-    background-color: #202020;
 }
 
 .smallSquare{
+    position: relative;
     height: 145px;
     width: 145px;
     margin: 5px;
+    background-color: gray;
 }
 
 .centered-text{
