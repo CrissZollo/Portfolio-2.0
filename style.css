@@ -24,7 +24,6 @@ header h1{
 
 .column.top, .column.bottom{
     width: 25%;
-    margin: 5%;
 }
 
 
@@ -44,26 +43,26 @@ header h1{
 }
 
 
-.bigSquare, .smallSquareGroup{
+.bigSquare, .smallSquare{
+    
     transform: rotate(45deg);
+}
+
+.smallSquare.column{
+    margin: 0 75px;
+}
+
+.smallSquareGroup{
+margin: 15px 67px;
 }
 
 .bigSquare{
     height: 300px;
     width: 300px;
     margin: 10px;
-    background-color: gray;
 }
 
 .smallSquare{
     height: 145px;
     width: 145px;
-    margin: 5px;
-    background-color: gray;
 }
-
-/* @media screen and(max-width: 1000px){
-    img{
-        width: 150px;
-    }
-} */
