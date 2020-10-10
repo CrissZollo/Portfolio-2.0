@@ -1,4 +1,4 @@
-body{   
+html, body{   
     z-index: -1;
     user-select: none;
     -moz-user-select: none;
@@ -11,10 +11,7 @@ body{
     background-color: #1a1b22;
 }
 
-h2{
-    position: absolute;
-}
-
+/* Display box settings */
 .displayBox{
     position: absolute;
     text-align: center;
@@ -31,12 +28,59 @@ h2{
     transition: height 0.5s;
 }
 
+/* Display box Title */
 .displayBox h1{
     font-family: 'Aclonica', sans-serif;
     color: white;
     text-align: center;
     margin-top: 5px;
 }
+
+/* Display box img */
+.displayBox img{
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50px;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Information Text in display box */
+.displayBox h3{
+    position: absolute;
+    padding-right: 20px;
+    width: 35rem;
+    height: 80%;
+    right: 0;
+    margin-right: 45px;
+    color: white;
+    text-align: center;
+    overflow: auto;
+}
+
+/* width */
+.displayBox h3::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  .displayBox h3::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .displayBox h3::-webkit-scrollbar-thumb {
+    background: #888;
+    height: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .displayBox h3::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 header h1{
     font-family: 'Aclonica', sans-serif;
