@@ -1,29 +1,55 @@
-html, body{   
+body{   
     z-index: -1;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    margin-left: 5%; 
-    margin-right: 5%; 
-    height: 100%; 
+
+    height: 100vh; 
     overflow: hidden; 
-    background-color: #43475a;
+    background-color: #1a1b22;
 }
 
 h2{
     position: absolute;
 }
 
-header h1{
+.displayBox{
+    position: absolute;
     text-align: center;
-    margin: 0px;
+    width: 0vw;
+    height: 0vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    z-index: 5;
+    margin: 0;
+    opacity: 90%;
+    border-radius: 50px;
+    transition: height 0.5s;
+}
+
+.displayBox h1{
+    font-family: 'Aclonica', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+header h1{
+    font-family: 'Aclonica', sans-serif;
+    text-align: center;
     font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 35px;
+    color: white;
 }
 
 .row{
     width: 100%;
+    height: calc(100% / 3);
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -31,7 +57,7 @@ header h1{
 
 
 .column.middle{
-    width: calc(100% / 3);
+    width: calc(100vw / 3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,11 +65,13 @@ header h1{
 
 .column.top, .column.bottom{
     width: 25%;
+
 }
 
 
 .row.middle{
     height: 5%;
+    margin: 10vh 0;
 }
 
 img{
@@ -54,6 +82,7 @@ img{
     -ms-user-select: none;
 }
 
+
 .row img{
     border: none;
     text-align: center;
@@ -62,9 +91,10 @@ img{
 
 }
 
-.row img:hover, h2:hover{
+.row img:hover{
     filter: grayscale(0%);
     transition: .15s ease-in-out;
+    cursor: pointer;
 }
 
 
@@ -91,3 +121,37 @@ margin: 15px 67px;
     height: 145px;
     width: 145px;
 }
+
+
+@media screen and (max-width: 1550px) {
+    .bigSquare{
+        height: 225px;
+        width: 225px;
+    }
+    
+    .smallSquare{
+        height: 107.5px;
+        width: 107.5px;
+    }
+
+    .row.middle{
+        height: 5%;
+        margin: 7vh 0;
+    }
+  }
+
+@media screen and (max-width: 1000px) {
+    .bigSquare{
+        height: 150px;
+        width: 150px;
+        }
+    
+    .smallSquare{
+        height: 70px;
+        width: 70px;
+    }
+    .row.middle{
+        height: 5%;
+        margin: 5vh 0;
+    }
+  }
