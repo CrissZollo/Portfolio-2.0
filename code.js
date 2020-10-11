@@ -8,6 +8,7 @@ let bestProject2 = document.querySelector('.bestProject2');
 let displayBox = document.querySelector('.displayBox');
 let displayImg = document.querySelector('.displayImg');
 let infoText = document.querySelector('.informationText');
+let close = document.querySelector('.close');
 
 // Middle row images clicker events
 aboutMe.addEventListener('click', () => showText("aboutMe"));
@@ -17,7 +18,7 @@ bestProject2.addEventListener('click', () => showText("bestProject2"));
 
 
 displayImg.addEventListener('click', () => openProject());
-displayBox.addEventListener('click', () => hideText());
+close.addEventListener('click', () => hideText());
 
 
 displayBox.style.visibility = "hidden";
