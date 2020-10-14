@@ -38,7 +38,6 @@ function showText(project)
 
 function hideText()
 {
-
     displayBox.style.height = "0vh";
     displayBox.style.width = "0vw";
 
