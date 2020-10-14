@@ -3,6 +3,7 @@
 let aboutMe = document.querySelector('.aboutMe');
 let bestProject1 = document.querySelector('.bestProject1');
 let bestProject2 = document.querySelector('.bestProject2');
+let placeHolder = document.querySelector('.placeHolder');
 
 // This is the box with information
 let displayBox = document.querySelector('.displayBox');
@@ -14,6 +15,8 @@ let close = document.querySelector('.close');
 aboutMe.addEventListener('click', () => showText("aboutMe"));
 bestProject1.addEventListener('click', () => showText("bestProject1"));
 bestProject2.addEventListener('click', () => showText("bestProject2"));
+placeHolder.addEventListener('click', () => showText("placeHolder"));
+
 
 
 
@@ -104,6 +107,10 @@ function returnInfoText(project)
             text = `Detta är andra projectet`
             break;
     
+        case "placeHolder":
+            text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consectetur nostrum iure in dolore at ex rem hic? Quasi deserunt quisquam necessitatibus, quos ipsam ratione autem numquam rerum adipisci voluptatum ex vitae delectus similique, magni aut temporibus voluptas! Iusto in veritatis quas. Perferendis, sint animi necessitatibus, nulla corporis officiis eos obcaecati distinctio iure dicta doloremque atque ratione quasi aliquid asperiores cum, pariatur laboriosam deserunt architecto et nostrum. Repellat excepturi iste ipsam quibusdam officiis tenetur, architecto quia omnis et vitae sapiente corrupti cum, repellendus adipisci natus perspiciatis nam sit obcaecati impedit sint. Quia atque quibusdam harum veritatis consequatur animi, reprehenderit dignissimos, ipsa beatae eius deleniti sapiente dolorem repellat aut, modi dolor temporibus soluta. Quam et aut itaque dignissimos dolorem alias modi enim unde deserunt cum fugit aliquam animi, tenetur illum repellendus consectetur perspiciatis. Nihil autem, sint ex quae consequuntur soluta ratione ea, quod vero, facere sequi doloribus. Praesentium vel, veniam aliquid corrupti quaerat a iusto facilis cum porro cupiditate excepturi quam asperiores harum corporis provident quidem, quia mollitia velit repellendus vero. Accusantium numquam quaerat architecto consectetur ut nemo est ipsa repellat consequatur veritatis in, laudantium magni, error voluptates voluptas corporis adipisci laboriosam neque facilis officiis veniam ipsam. Sapiente necessitatibus magni excepturi?"
+            break;
+
         default:
             break;
     }
@@ -130,6 +137,10 @@ function returnImg(project)
             displayImg.className = "bestProject2";
             break;
     
+        case "placeHolder":
+            img = "pics/place holder.jfif";
+            break;
+            
         default:
             displayImg.className = "displayImg";
             break;
