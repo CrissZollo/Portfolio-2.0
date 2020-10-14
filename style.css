@@ -1,62 +1,222 @@
-html, body{margin: 0; height: 100%; overflow: hidden; background-color: #43475a;}
+html, body{   
+    z-index: -1;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    height: 100vh; 
+    overflow: hidden; 
+    background-color: #1a1b22;
+}
+
+/* Display box settings */
+.displayBox{
+    position: absolute;
+    text-align: center;
+    width: 0vw;
+    height: 0vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    z-index: 5;
+    margin: 0;
+    opacity: 95%;
+    border-radius: 50px;
+    transition: height 0.5s;
+}
+
+/* Display box Title */
+.displayBox h1{
+    font-family: 'Aclonica', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.displayBox span{
+    cursor: pointer;
+    position: absolute;
+    font-family: 'Aclonica', sans-serif;
+    color: white;
+    text-align: center;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Display box img */
+.displayBox img{
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50px;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.displayBox .divider{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1b22;
+    width: 0.5rem;
+    height: 50%;
+}
+
+/* Information Text in display box */
+.displayBox h3{
+    position: absolute;
+    padding-right: 20px;
+    width: 40%;
+    height: 80%;
+    right: 0;
+    margin-right: 45px;
+    color: white;
+    text-align: center;
+    overflow: auto;
+}
+
+/* width */
+.displayBox h3::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  .displayBox h3::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .displayBox h3::-webkit-scrollbar-thumb {
+    background: #888;
+    max-height: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .displayBox h3::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 header h1{
+    font-family: 'Aclonica', sans-serif;
     text-align: center;
-    margin: 0px;
     font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 35px;
+    color: white;
 }
 
 .row{
     width: 100%;
+    height: calc(100% / 3);
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
 }
 
-.column{
-    width: 33.3333vw;
-    text-align: left;
+
+.column.middle{
+    width: calc(100vw / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.column img{
-    vertical-align: middle;
+.column.top, .column.bottom{
+    width: 25%;
+
+}
+
+
+.row.middle{
+    height: 5%;
+    margin: 10vh 0;
+}
+
+img{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+.row img{
     border: none;
+    text-align: center;
     border-radius: 10%;
     filter: grayscale(90%);
+
 }
 
-.column img:hover{
+.row img:hover{
     filter: grayscale(0%);
+    transition: .15s ease-in-out;
+    cursor: pointer;
 }
 
 
-.image-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.bigSquare, .smallSquare{
+    
+    transform: rotate(45deg);
+}
+
+.smallSquare.column{
+    margin: 0 75px;
+}
+
+.smallSquareGroup{
+margin: 15px 67px;
 }
 
 .bigSquare{
     height: 300px;
     width: 300px;
     margin: 10px;
-    background-color: #202020;
 }
 
 .smallSquare{
     height: 145px;
     width: 145px;
-    margin: 5px;
 }
 
-.centered-text{
-    position: absolute;
-    top: 50%;
-    right: 15%;
-}
 
-/* @media screen and(max-width: 1000px){
-    img{
-        width: 150px;
+@media screen and (max-width: 1550px) {
+    .bigSquare{
+        height: 225px;
+        width: 225px;
     }
-} */
+    
+    .smallSquare{
+        height: 107.5px;
+        width: 107.5px;
+    }
+
+    .row.middle{
+        height: 5%;
+        margin: 7vh 0;
+    }
+  }
+
+@media screen and (max-width: 1000px) {
+    .bigSquare{
+        height: 150px;
+        width: 150px;
+        }
+    
+    .smallSquare{
+        height: 70px;
+        width: 70px;
+    }
+    .row.middle{
+        height: 5%;
+        margin: 5vh 0;
+    }
+  }
