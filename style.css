@@ -12,6 +12,8 @@ body {
     background-color: #1a1b22;
 }
 
+
+
 /* Display box settings */
 .displayBox {
     position: absolute;
@@ -26,7 +28,7 @@ body {
     margin: 0;
     opacity: 95%;
     border-radius: 50px;
-    transition: height 0.5s;
+    transition: width 0.5s;
 }
 
 /* Display box Title */
@@ -90,12 +92,15 @@ body {
 
 }
 
+<<<<<<< HEAD
 .circle.css {
     background: conic-gradient(lightblue 68%, white 0%);
 
 }
 
 
+=======
+>>>>>>> d4fb56524a54682ac4847ad8542750af588cb43c
 .displayBox .divider {
     position: absolute;
     left: 50%;
