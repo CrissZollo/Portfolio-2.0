@@ -92,15 +92,11 @@ body {
 
 }
 
-<<<<<<< HEAD
 .circle.css {
     background: conic-gradient(lightblue 68%, white 0%);
 
 }
 
-
-=======
->>>>>>> d4fb56524a54682ac4847ad8542750af588cb43c
 .displayBox .divider {
     position: absolute;
     left: 50%;
