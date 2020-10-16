@@ -148,7 +148,7 @@ function returnImg(project)
             break;
             
         case "bestProject2":
-            img = "pics/place holder.jfif";
+            img = "pics/monkey business.png";
             displayImg.className = "bestProject2";
             break;
     
