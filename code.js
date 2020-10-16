@@ -55,11 +55,12 @@ function openProject()
             break;
 
         case "bestProject1":
-            window.open("/textgame/index.html");
+            window.open(window.location.href + "/textgame/index.html");
             break;
             
         case "bestProject2":
-            window.open("/Monkey Business/index.html")
+            // window.open(window.location.href + "/Monkey Business/index.html")
+            window.location.href = "/Monkey Business/index.html"
             break;
     
         default:
