@@ -59,6 +59,7 @@ function openProject()
             break;
             
         case "bestProject2":
+            window.open("/Monkey Business/index.html")
             break;
     
         default:
