@@ -55,12 +55,25 @@ function openProject()
             break;
 
         case "bestProject1":
-            window.open(window.location.href + "/textgame/index.html");
+            if (window.location.href != "http://127.0.0.1:5500/index.html") 
+            {
+                window.open(window.location.href + "/textgame/index.html");
+            }
+            else
+            {
+                window.open("/textgame/index.html");
+            }
             break;
             
         case "bestProject2":
-            // window.open(window.location.href + "/Monkey Business/index.html")
-            window.location.href = "/Monkey Business/index.html"
+            if (window.location.href != "http://127.0.0.1:5500/index.html") 
+            {
+                window.open(window.location.href + "/Monkey Business/index.html");
+            }
+            else
+            {
+                window.open("/Monkey Business/index.html");
+            }
             break;
     
         default:
