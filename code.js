@@ -1,9 +1,8 @@
-
 // Middle row images
 let aboutMe = document.querySelector('.aboutMe');
-let bestProject1 = document.querySelector('.bestProject1');
-let bestProject2 = document.querySelector('.bestProject2');
-let placeHolder = document.querySelector('.placeHolder');
+let bestProject1 = document.querySelector('.minecraft');
+let bestProject2 = document.querySelector('.monkeyGame');
+let textGame = document.querySelector('.textGame');
 
 // This is the box with information
 let displayBox = document.querySelector('.displayBox');
@@ -13,9 +12,9 @@ let close = document.querySelector('.close');
 
 // Middle row images clicker events
 aboutMe.addEventListener('click', () => showText("aboutMe"));
-bestProject1.addEventListener('click', () => showText("bestProject1"));
-bestProject2.addEventListener('click', () => showText("bestProject2"));
-placeHolder.addEventListener('click', () => showText("placeHolder"));
+bestProject1.addEventListener('click', () => showText("minecraft"));
+bestProject2.addEventListener('click', () => showText("monkeyGame"));
+textGame.addEventListener('click', () => showText("textGame"));
 
 
 
@@ -26,12 +25,11 @@ close.addEventListener('click', () => hideText());
 
 displayBox.style.visibility = "hidden";
 
-function showText(project)
-{
+function showText(project) {
     let text = returnInfoText(project);
     let img = returnImg(project);
-    
-    
+
+
     displayBox.style.visibility = "visible";
     displayBox.style.width = "75vw";
     displayBox.style.height = "90vh";
@@ -39,8 +37,7 @@ function showText(project)
     displayImg.src = img;
 }
 
-function hideText()
-{
+function hideText() {
     displayBox.style.height = "0vh";
     displayBox.style.width = "0vw";
 
@@ -48,46 +45,43 @@ function hideText()
 }
 
 
-function openProject()
-{
+function openProject() {
     switch (displayImg.className) {
         case "aboutMe":
             break;
 
-        case "bestProject1":
-            if (window.location.href != "http://127.0.0.1:5500/index.html") 
-            {
+        case "textGame":
+            if (window.location.href != "http://127.0.0.1:5501/index.html") {
                 window.open(window.location.href + "/textgame/index.html");
-            }
-            else
-            {
+            } else {
                 window.open("/textgame/index.html");
             }
             break;
-            
-        case "bestProject2":
-            if (window.location.href != "http://127.0.0.1:5500/index.html") 
-            {
+
+        case "monkeyGame":
+            if (window.location.href != "http://127.0.0.1:5501/index.html") {
                 window.open(window.location.href + "/Monkey Business/index.html");
-            }
-            else
-            {
+            } else {
                 window.open("/Monkey Business/index.html");
             }
             break;
-    
+
+        case "minecraft":
+            window.open("http://85.24.194.62/");
+            break;
+
+
         default:
             break;
     }
 }
 
 // returns the right text for the right image
-function returnInfoText(project)
-{
+function returnInfoText(project) {
     let text = "";
     switch (project) {
         case "aboutMe":
-            text = `Mitt namn är Christoffer Kronblad, är 19 år och bor i Eslöv.
+            text = `Mitt namn är Christoffer Kronblad, är 20 år och bor i Eslöv.
             Mina intressen styrde in mig på ett av de enda teknikprogrammen med inriktning spelutveckling på LBS skolan i Lund
             och mina år där och kursern är avslutade. Under mina gymnasieår har jag lärt mig väldigt mycket. Att kunna lösa olika
             tekniska problem mer effektivt och smartare med hjälp av programmering till att ha varit med och drivit ett eget UF
@@ -102,10 +96,10 @@ function returnInfoText(project)
             få kunna jobba hos er. 
             Med detta hoppas jag att jag har väckt ert intresse och jag ser fram emot en intervju där vi kan lära känna varandra
             bättre.`
-            
+
             break;
-            
-        case "bestProject1":
+
+        case "textGame":
 
             text = `Detta projektet var skapat med en interaktiv berättelse med olika slut. 
             Spelaren är i en konversation med en person som behöver hjälp. 
@@ -117,11 +111,20 @@ function returnInfoText(project)
             HTML, CSS, JavaScript, jQuery, AJAX`
             break;
 
-        case "bestProject2":
+        case "minecraft":
 
-            text = `Detta är andra projectet`
+            text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consectetur nostrum iure in dolore at ex rem hic? Quasi deserunt quisquam necessitatibus, quos ipsam ratione autem numquam rerum adipisci voluptatum ex vitae delectus similique, magni aut temporibus voluptas! Iusto in veritatis quas. Perferendis, sint animi necessitatibus, nulla corporis officiis eos obcaecati distinctio iure dicta doloremque atque ratione quasi aliquid asperiores cum, pariatur laboriosam deserunt architecto et nostrum. Repellat excepturi iste ipsam quibusdam officiis tenetur, architecto quia omnis et vitae sapiente corrupti cum, repellendus adipisci natus perspiciatis nam sit obcaecati impedit sint. Quia atque quibusdam harum veritatis consequatur animi, reprehenderit dignissimos, ipsa beatae eius deleniti sapiente dolorem repellat aut, modi dolor temporibus soluta. Quam et aut itaque dignissimos dolorem alias modi enim unde deserunt cum fugit aliquam animi, tenetur illum repellendus consectetur perspiciatis. Nihil autem, sint ex quae consequuntur soluta ratione ea, quod vero, facere sequi doloribus. Praesentium vel, veniam aliquid corrupti quaerat a iusto facilis cum porro cupiditate excepturi quam asperiores harum corporis provident quidem, quia mollitia velit repellendus vero. Accusantium numquam quaerat architecto consectetur ut nemo est ipsa repellat consequatur veritatis in, laudantium magni, error voluptates voluptas corporis adipisci laboriosam neque facilis officiis veniam ipsam. Sapiente necessitatibus magni excepturi?"
             break;
-    
+
+        case "monkeyGame":
+
+            text = `We were given the task to create a 2D game on a HTML site. We made a game based off of "Space shooter" but with our own twist. 
+            We named it "Monkey Business". This is my second game made in JS and the improvement is significant from the last game I made.
+            The goal of the game is destroy the coconuts with bananas and reaching the score of 1000. That'll say, if you destroy 100 bananas at 10 points each, you beat the game.
+            Considering the timelimit we had for this assesment, I was not able to make it as challenging, nor go in depth into the game.
+            What I'd love to would be to implement different stages, where you would face different bosses, new power-ups and more endurable coconuts per level.`
+            break;
+
         case "placeHolder":
             text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consectetur nostrum iure in dolore at ex rem hic? Quasi deserunt quisquam necessitatibus, quos ipsam ratione autem numquam rerum adipisci voluptatum ex vitae delectus similique, magni aut temporibus voluptas! Iusto in veritatis quas. Perferendis, sint animi necessitatibus, nulla corporis officiis eos obcaecati distinctio iure dicta doloremque atque ratione quasi aliquid asperiores cum, pariatur laboriosam deserunt architecto et nostrum. Repellat excepturi iste ipsam quibusdam officiis tenetur, architecto quia omnis et vitae sapiente corrupti cum, repellendus adipisci natus perspiciatis nam sit obcaecati impedit sint. Quia atque quibusdam harum veritatis consequatur animi, reprehenderit dignissimos, ipsa beatae eius deleniti sapiente dolorem repellat aut, modi dolor temporibus soluta. Quam et aut itaque dignissimos dolorem alias modi enim unde deserunt cum fugit aliquam animi, tenetur illum repellendus consectetur perspiciatis. Nihil autem, sint ex quae consequuntur soluta ratione ea, quod vero, facere sequi doloribus. Praesentium vel, veniam aliquid corrupti quaerat a iusto facilis cum porro cupiditate excepturi quam asperiores harum corporis provident quidem, quia mollitia velit repellendus vero. Accusantium numquam quaerat architecto consectetur ut nemo est ipsa repellat consequatur veritatis in, laudantium magni, error voluptates voluptas corporis adipisci laboriosam neque facilis officiis veniam ipsam. Sapiente necessitatibus magni excepturi?"
             break;
@@ -133,8 +136,7 @@ function returnInfoText(project)
     return String(text);
 }
 
-function returnImg(project)
-{
+function returnImg(project) {
     let img = "";
     switch (project) {
         case "aboutMe":
@@ -142,20 +144,24 @@ function returnImg(project)
             displayImg.className = "aboutMe"
             break;
 
-        case "bestProject1":
-            img = "pics/textgame.png";
-            displayImg.className = "bestProject1";
+        case "minecraft":
+            img = "pics/minecraft.png";
+            displayImg.className = "minecraft";
             break;
-            
-        case "bestProject2":
+
+        case "monkeyGame":
             img = "pics/monkey business.png";
-            displayImg.className = "bestProject2";
+            displayImg.className = "monkeyGame";
             break;
-    
+
+        case "textGame":
+            img = "pics/textgame.png";
+            break;
+
         case "placeHolder":
             img = "pics/place holder.jfif";
             break;
-            
+
         default:
             displayImg.className = "displayImg";
             break;
